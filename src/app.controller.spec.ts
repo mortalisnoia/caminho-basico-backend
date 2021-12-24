@@ -60,5 +60,9 @@ describe('AppController', () => {
       let body = { "signo": "Peixes" };
       expect(appController.getThisHoroscopo(body)).toBe('Ontem tinha DÚVIDAS, hoje… NÃO SEI!');
     });
+    it('Zoeira de signo nenhum', () => {
+      let body = { "signo": "Signo Inválido" };
+      expect(appController.getThisHoroscopo(body)).toBe('Você não tem ideia do que está fazendo aqui, né??');
+    });
   });
 });

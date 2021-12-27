@@ -124,4 +124,13 @@ describe('AppController (e2e)', () => {
       .expect('Ontem tinha DÚVIDAS, hoje… NÃO SEI!');
   });
 
+  it('Zoeira de peixes', () => {
+    let body = { "signo": "Deve dar erro" };
+    return request(app.getHttpServer())
+      .post('/')
+      .send(body)
+      .expect(201)
+      .expect('Você não tem ideia do que está fazendo aqui, né??');
+  });
+
 });

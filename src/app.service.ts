@@ -8,7 +8,6 @@ export class AppService {
     if (body.signo == 'Áries') {
       horoscopo = text.aries;
     }
-
     else if (body.signo == 'Touro') {
       horoscopo = text.touro;
     }

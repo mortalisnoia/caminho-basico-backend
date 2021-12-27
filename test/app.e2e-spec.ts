@@ -124,7 +124,7 @@ describe('AppController (e2e)', () => {
       .expect('Ontem tinha DÚVIDAS, hoje… NÃO SEI!');
   });
 
-  it('Zoeira de peixes', () => {
+  it('Zoeira de signo inválido', () => {
     let body = { "signo": "Deve dar erro" };
     return request(app.getHttpServer())
       .post('/')

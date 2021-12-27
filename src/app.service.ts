@@ -1,48 +1,49 @@
 import { Injectable } from '@nestjs/common';
+import * as text from './horoscopo.json';
 
 @Injectable()
 export class AppService {
   getHoroscopo(body: { signo: string }) {
     let horoscopo;
     if (body.signo == 'Áries') {
-      horoscopo = "Não sei bem o que quero, só sei que quero JÁ!"
+      horoscopo = text.aries;
     }
 
     else if (body.signo == 'Touro') {
-      horoscopo = "Amor numa cabana? Só se for 5 ESTRELAS"
+      horoscopo = text.touro;
     }
     else if (body.signo == 'Gêmeos') {
-      horoscopo = "Odeio fofocas… Mas… já te contei a última?"
+      horoscopo = text.gemeos;
     }
     else if (body.signo == 'Câncer') {
-      horoscopo = "Lar… Meu doce LAR!"
+      horoscopo = text.cancer;
     }
     else if (body.signo == 'Leão') {
-      horoscopo = "Antigamente EU era vaidoso, mas agora me curei e estou PERFEITO!"
+      horoscopo = text.leao
     }
     else if (body.signo == 'Virgem') {
-      horoscopo = "Já te disse que sou SUPER DEMOCRATA… mas porque você ainda não fez o que eu MANDEI?"
+      horoscopo = text.virgem;
     }
     else if (body.signo == 'Libra') {
-      horoscopo = "A justiça tarda mas não falha, pois está sempre COMIGO"
+      horoscopo = text.libra;
     }
     else if (body.signo == 'Escorpião') {
-      horoscopo = "Sou super LIBERAL… mas onde você foi, MESMO?"
+      horoscopo = text.escorpiao;
     }
     else if (body.signo == 'Sagitário') {
-      horoscopo = "Já te disse 1.000.000 de vezes que NUNCA EXAGERO!"
+      horoscopo = text.sagitario;
     }
     else if (body.signo == 'Capricórnio') {
-      horoscopo = "HOJE assumi o cargo de vice-diretor de uma empresa que ORGANIZAREI, e será sucesso daqui a 10 ANOS"
+      horoscopo = text.capricornio;
     }
     else if (body.signo == 'Aquário') {
-      horoscopo = "Já estou guardando grana, para construir a NOSSA bela casa lá na LUA"
+      horoscopo = text.aquario;
     }
     else if (body.signo == 'Peixes') {
-      horoscopo = "Ontem tinha DÚVIDAS, hoje… NÃO SEI!"
+      horoscopo = text.peixes;
     }
     else {
-      horoscopo = "Você não tem ideia do que está fazendo aqui, né??"
+      horoscopo = text.erro;
     }
     return horoscopo;
   }
